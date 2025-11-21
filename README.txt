@@ -1,1 +1,0 @@
-240541165 Yusuf Yontürk https://www.youtube.com/watch?v=Fe20HWAm4tE
