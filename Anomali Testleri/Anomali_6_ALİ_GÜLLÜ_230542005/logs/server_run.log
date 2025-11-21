@@ -1,0 +1,288 @@
+2025-11-11 14:47:41,586 | INFO | app | CSMS running at ws://localhost:9000
+2025-11-11 14:47:41,597 | INFO | websockets.server | server listening on 0.0.0.0:9000
+2025-11-11 14:52:24,208 | INFO | websockets.server | connection open
+2025-11-11 14:52:24,208 | INFO | app | Connection from: CP_1
+2025-11-11 14:52:24,208 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 14:52:24,208 | INFO | ocpp | CP_1: receive message [2, "spoof-1762861944208", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 14:52:24,208 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:62930", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 14:52:24,255 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762861944208, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 14:52:24,256 | INFO | ocpp | CP_1: send [4,"spoof-1762861944208","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 14:52:24,258 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 14:59:15,300 | INFO | websockets.server | connection open
+2025-11-11 14:59:15,302 | INFO | app | Connection from: CP_1/CP_1
+2025-11-11 14:59:15,302 | INFO | security | {"event": "ws_connect", "station_id": "CP_1/CP_1", "origin_id": "unknown"}
+2025-11-11 14:59:15,355 | INFO | ocpp | CP_1/CP_1: receive message [2,"1f6fdde5-27cc-40c4-b65a-cd8454dc21f7","BootNotification",{"chargePointModel":"E-Emulator","chargePointSerialNumber":"MontaEmulator","chargePointVendor":"Monta","firmwareVersion":"1.0.0"}]
+2025-11-11 14:59:15,356 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:63097", "action": "BootNotification", "raw_len": 191}
+2025-11-11 14:59:15,373 | INFO | app | BootNotification from CP_1/CP_1: None/None
+2025-11-11 14:59:15,373 | ERROR | ocpp | Error while handling request '<Call - unique_id=1f6fdde5-27cc-40c4-b65a-cd8454dc21f7, action=BootNotification, payload={'chargePointModel': 'E-Emulator', 'chargePointSerialNumber': 'MontaEmulator', 'chargePointVendor': 'Monta', 'firmwareVersion': '1.0.0'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 324, in _handle_call
+    response = await response
+  File "/Users/aligullu/ocpp-lab/server/ocpp_server.py", line 37, in on_boot_notification
+    return call_result.BootNotificationPayload(
+AttributeError: module 'ocpp.v16.call_result' has no attribute 'BootNotificationPayload'
+2025-11-11 14:59:15,375 | INFO | ocpp | CP_1/CP_1: send [4,"1f6fdde5-27cc-40c4-b65a-cd8454dc21f7","InternalError","An unexpected error occurred.",{}]
+2025-11-11 14:59:22,346 | INFO | websockets.server | connection open
+2025-11-11 14:59:22,346 | INFO | app | Connection from: CP_1
+2025-11-11 14:59:22,346 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 14:59:22,346 | INFO | ocpp | CP_1: receive message [2, "spoof-1762862362346", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 14:59:22,346 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:63100", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 14:59:22,346 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762862362346, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 14:59:22,346 | INFO | ocpp | CP_1: send [4,"spoof-1762862362346","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 14:59:22,347 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 14:59:31,023 | INFO | ocpp | CP_1/CP_1: receive message [2,"32b248e1-382a-4472-aeb2-99781d9a76d0","StatusNotification",{"connectorId":0,"errorCode":"NoError","status":"Available","timestamp":"2025-11-11T11:59:30Z"}]
+2025-11-11 14:59:31,023 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:63097", "action": "StatusNotification", "raw_len": 159}
+2025-11-11 14:59:31,023 | ERROR | ocpp | Error while handling request '<Call - unique_id=32b248e1-382a-4472-aeb2-99781d9a76d0, action=StatusNotification, payload={'connectorId': 0, 'errorCode': 'NoError', 'status': 'Available', 'timestamp': '2025-11-11T11:59:30Z'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'StatusNotification'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for StatusNotification registered.'}
+2025-11-11 14:59:31,024 | INFO | ocpp | CP_1/CP_1: send [4,"32b248e1-382a-4472-aeb2-99781d9a76d0","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for StatusNotification registered."}]
+2025-11-11 15:00:03,673 | INFO | websockets.server | connection open
+2025-11-11 15:00:03,673 | INFO | app | Connection from: CP_1
+2025-11-11 15:00:03,673 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 15:00:03,674 | INFO | ocpp | CP_1: receive message [2, "spoof-1762862403673", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 15:00:03,674 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:63113", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 15:00:03,674 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762862403673, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 15:00:03,674 | INFO | ocpp | CP_1: send [4,"spoof-1762862403673","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 15:00:03,675 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 15:00:26,938 | INFO | websockets.server | connection open
+2025-11-11 15:00:26,939 | INFO | app | Connection from: CP_1
+2025-11-11 15:00:26,939 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 15:00:26,939 | INFO | ocpp | CP_1: receive message [2, "spoof-1762862426939", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 15:00:26,939 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:63116", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 15:00:26,939 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762862426939, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 15:00:26,939 | INFO | ocpp | CP_1: send [4,"spoof-1762862426939","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 15:00:26,940 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 15:02:11,515 | INFO | websockets.server | connection open
+2025-11-11 15:02:11,515 | INFO | app | Connection from: CP_1
+2025-11-11 15:02:11,515 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 15:02:11,515 | INFO | ocpp | CP_1: receive message [2, "spoof-1762862531515", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 15:02:11,516 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:63140", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 15:02:11,516 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762862531515, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 15:02:11,516 | INFO | ocpp | CP_1: send [4,"spoof-1762862531515","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 15:02:11,516 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 15:17:29,730 | INFO | ocpp | CP_1/CP_1: receive message [2,"2451f06f-4bb0-4900-814b-c81762611da0","StatusNotification",{"connectorId":0,"errorCode":"NoError","info":"Disconnecting","status":"Unavailable","timestamp":"2025-11-11T12:17:29Z"}]
+2025-11-11 15:17:29,732 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:63097", "action": "StatusNotification", "raw_len": 184}
+2025-11-11 15:17:29,732 | ERROR | ocpp | Error while handling request '<Call - unique_id=2451f06f-4bb0-4900-814b-c81762611da0, action=StatusNotification, payload={'connectorId': 0, 'errorCode': 'NoError', 'info': 'Disconnecting', 'status': 'Unavailable', 'timestamp': '2025-11-11T12:17:29Z'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'StatusNotification'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for StatusNotification registered.'}
+2025-11-11 15:17:29,733 | INFO | ocpp | CP_1/CP_1: send [4,"2451f06f-4bb0-4900-814b-c81762611da0","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for StatusNotification registered."}]
+2025-11-11 15:17:30,190 | ERROR | app | Connection closed or error: no close frame received or sent
+2025-11-11 18:49:42,091 | INFO | app | CSMS running at ws://localhost:9000
+2025-11-11 18:49:42,113 | INFO | websockets.server | server listening on 0.0.0.0:9000
+2025-11-11 18:50:22,648 | INFO | websockets.server | connection open
+2025-11-11 18:50:22,648 | INFO | app | Connection from: CP_1/CP_1
+2025-11-11 18:50:22,648 | INFO | security | {"event": "ws_connect", "station_id": "CP_1/CP_1", "origin_id": "unknown"}
+2025-11-11 18:50:22,704 | INFO | ocpp | CP_1/CP_1: receive message [2,"2a628f18-2320-4b11-b605-fbb5fee21dcb","BootNotification",{"chargePointModel":"E-Emulator","chargePointSerialNumber":"MontaEmulator","chargePointVendor":"Monta","firmwareVersion":"1.0.0"}]
+2025-11-11 18:50:22,704 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:64162", "action": "BootNotification", "raw_len": 191}
+2025-11-11 18:50:22,711 | INFO | app | BootNotification from CP_1/CP_1: None/None
+2025-11-11 18:50:22,711 | ERROR | ocpp | Error while handling request '<Call - unique_id=2a628f18-2320-4b11-b605-fbb5fee21dcb, action=BootNotification, payload={'chargePointModel': 'E-Emulator', 'chargePointSerialNumber': 'MontaEmulator', 'chargePointVendor': 'Monta', 'firmwareVersion': '1.0.0'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 324, in _handle_call
+    response = await response
+  File "/Users/aligullu/ocpp-lab/server/ocpp_server.py", line 37, in on_boot_notification
+    return call_result.BootNotificationPayload(
+AttributeError: module 'ocpp.v16.call_result' has no attribute 'BootNotificationPayload'
+2025-11-11 18:50:22,713 | INFO | ocpp | CP_1/CP_1: send [4,"2a628f18-2320-4b11-b605-fbb5fee21dcb","InternalError","An unexpected error occurred.",{}]
+2025-11-11 18:51:54,578 | INFO | websockets.server | connection open
+2025-11-11 18:51:54,578 | INFO | app | Connection from: CP_1
+2025-11-11 18:51:54,578 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 18:51:54,578 | INFO | ocpp | CP_1: receive message [2, "spoof-1762876314578", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 18:51:54,578 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:64168", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 18:51:54,625 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762876314578, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 18:51:54,625 | INFO | ocpp | CP_1: send [4,"spoof-1762876314578","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 18:51:54,626 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 18:52:00,031 | INFO | ocpp | CP_1/CP_1: receive message [2,"129037a3-ff8a-467a-9569-5518ca0cbd55","StatusNotification",{"connectorId":0,"errorCode":"NoError","info":"Disconnecting","status":"Unavailable","timestamp":"2025-11-11T15:51:59Z"}]
+2025-11-11 18:52:00,031 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:64162", "action": "StatusNotification", "raw_len": 184}
+2025-11-11 18:52:00,031 | ERROR | ocpp | Error while handling request '<Call - unique_id=129037a3-ff8a-467a-9569-5518ca0cbd55, action=StatusNotification, payload={'connectorId': 0, 'errorCode': 'NoError', 'info': 'Disconnecting', 'status': 'Unavailable', 'timestamp': '2025-11-11T15:51:59Z'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'StatusNotification'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for StatusNotification registered.'}
+2025-11-11 18:52:00,031 | INFO | ocpp | CP_1/CP_1: send [4,"129037a3-ff8a-467a-9569-5518ca0cbd55","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for StatusNotification registered."}]
+2025-11-11 18:52:00,449 | ERROR | app | Connection closed or error: no close frame received or sent
+2025-11-11 18:57:59,757 | INFO | app | CSMS running at ws://localhost:9000
+2025-11-11 18:57:59,764 | INFO | websockets.server | server listening on 0.0.0.0:9000
+2025-11-11 18:58:36,030 | INFO | websockets.server | connection open
+2025-11-11 18:58:36,030 | INFO | app | Connection from: CP_1/CP_1
+2025-11-11 18:58:36,030 | INFO | security | {"event": "ws_connect", "station_id": "CP_1/CP_1", "origin_id": "unknown"}
+2025-11-11 18:58:36,082 | INFO | ocpp | CP_1/CP_1: receive message [2,"ebd3b636-977a-4b8d-bb7a-5992acc37d0f","BootNotification",{"chargePointModel":"E-Emulator","chargePointSerialNumber":"MontaEmulator","chargePointVendor":"Monta","firmwareVersion":"1.0.0"}]
+2025-11-11 18:58:36,083 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:64178", "action": "BootNotification", "raw_len": 191}
+2025-11-11 18:58:36,089 | INFO | app | BootNotification from CP_1/CP_1: None/None
+2025-11-11 18:58:36,089 | ERROR | ocpp | Error while handling request '<Call - unique_id=ebd3b636-977a-4b8d-bb7a-5992acc37d0f, action=BootNotification, payload={'chargePointModel': 'E-Emulator', 'chargePointSerialNumber': 'MontaEmulator', 'chargePointVendor': 'Monta', 'firmwareVersion': '1.0.0'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 324, in _handle_call
+    response = await response
+  File "/Users/aligullu/ocpp-lab/server/ocpp_server.py", line 37, in on_boot_notification
+    return call_result.BootNotificationPayload(
+AttributeError: module 'ocpp.v16.call_result' has no attribute 'BootNotificationPayload'
+2025-11-11 18:58:36,090 | INFO | ocpp | CP_1/CP_1: send [4,"ebd3b636-977a-4b8d-bb7a-5992acc37d0f","InternalError","An unexpected error occurred.",{}]
+2025-11-11 18:58:58,084 | INFO | websockets.server | connection open
+2025-11-11 18:58:58,084 | INFO | app | Connection from: CP_1
+2025-11-11 18:58:58,084 | INFO | security | {"event": "ws_connect", "station_id": "CP_1", "origin_id": "attacker-unknown"}
+2025-11-11 18:58:58,084 | INFO | ocpp | CP_1: receive message [2, "spoof-1762876738084", "RemoteStopTransaction", {"transactionId": "999999"}]
+2025-11-11 18:58:58,084 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1", "remote": "127.0.0.1:64179", "action": "RemoteStopTransaction", "raw_len": 80}
+2025-11-11 18:58:58,131 | ERROR | ocpp | Error while handling request '<Call - unique_id=spoof-1762876738084, action=RemoteStopTransaction, payload={'transactionId': '999999'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'RemoteStopTransaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for RemoteStopTransaction registered.'}
+2025-11-11 18:58:58,131 | INFO | ocpp | CP_1: send [4,"spoof-1762876738084","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for RemoteStopTransaction registered."}]
+2025-11-11 18:58:58,133 | ERROR | app | Connection closed or error: received 1000 (OK); then sent 1000 (OK)
+2025-11-11 19:07:55,181 | INFO | ocpp | CP_1/CP_1: receive message [2,"4a4ea3ca-f6a6-4d9e-85e5-2e63274ce4b1","StatusNotification",{"connectorId":0,"errorCode":"NoError","info":"Disconnecting","status":"Unavailable","timestamp":"2025-11-11T16:07:55Z"}]
+2025-11-11 19:07:55,181 | INFO | security | {"event": "ocpp_rx", "station_id": "CP_1/CP_1", "remote": "127.0.0.1:64178", "action": "StatusNotification", "raw_len": 184}
+2025-11-11 19:07:55,181 | ERROR | ocpp | Error while handling request '<Call - unique_id=4a4ea3ca-f6a6-4d9e-85e5-2e63274ce4b1, action=StatusNotification, payload={'connectorId': 0, 'errorCode': 'NoError', 'info': 'Disconnecting', 'status': 'Unavailable', 'timestamp': '2025-11-11T16:07:55Z'}>'
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 294, in _handle_call
+    handlers = self.route_map[msg.action]
+KeyError: 'StatusNotification'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 272, in route_message
+    await self._handle_call(msg)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 296, in _handle_call
+    _raise_key_error(msg.action, self._ocpp_version)
+  File "/Users/aligullu/ocpp-lab/server/venv/lib/python3.9/site-packages/ocpp/charge_point.py", line 175, in _raise_key_error
+    raise NotImplementedError(
+ocpp.exceptions.NotImplementedError: NotImplementedError: Request Action is recognized but not supported by the receiver,  {'cause': 'No handler for StatusNotification registered.'}
+2025-11-11 19:07:55,181 | INFO | ocpp | CP_1/CP_1: send [4,"4a4ea3ca-f6a6-4d9e-85e5-2e63274ce4b1","NotImplemented","Request Action is recognized but not supported by the receiver",{"cause":"No handler for StatusNotification registered."}]
+2025-11-11 19:07:55,607 | ERROR | app | Connection closed or error: no close frame received or sent
