@@ -1,0 +1,16 @@
+ts,peer,action,duration,volume,anomaly
+2025-11-10T18:01:46,"('127.0.0.1', 7718)",BootNotification,,,
+2025-11-10T18:01:46,"('127.0.0.1', 7718)",StartTransaction,,,
+2025-11-10T18:01:49,"('127.0.0.1', 7718)",StopTransaction,29,0.0,COUNTER_MISMATCH
+2025-11-11T16:52:07,"('127.0.0.1', 4468)",BootNotification,,,
+2025-11-11T16:52:07,"('127.0.0.1', 4468)",StartTransaction,,,
+2025-11-11T16:52:09,"('127.0.0.1', 4468)",StopTransaction,27,0.0,COUNTER_MISMATCH
+2025-11-11T17:21:38,"('127.0.0.1', 45925)",BootNotification,,,
+2025-11-11T17:21:38,"('127.0.0.1', 45925)",StartTransaction,,,
+2025-11-11T17:21:41,"('127.0.0.1', 45925)",StopTransaction,28,0.0,COUNTER_MISMATCH
+2025-11-11T17:30:38,"('127.0.0.1', 47563)",BootNotification,,,
+2025-11-11T17:30:38,"('127.0.0.1', 47563)",StartTransaction,,,
+2025-11-11T17:30:40,"('127.0.0.1', 47563)",StopTransaction,24,0.0,COUNTER_MISMATCH
+2025-11-11T17:39:27,"('127.0.0.1', 47709)",BootNotification,,,
+2025-11-11T17:39:27,"('127.0.0.1', 47709)",StartTransaction,,,
+2025-11-11T17:39:31,"('127.0.0.1', 47709)",StopTransaction,42,0.0,COUNTER_MISMATCH
