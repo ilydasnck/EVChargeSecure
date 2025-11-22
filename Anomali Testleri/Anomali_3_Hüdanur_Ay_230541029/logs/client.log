@@ -1,0 +1,39 @@
+2025-11-22 15:14:38,969 — INFO — Server baðlantýsý deneniyor: ws://localhost:9000
+2025-11-22 15:14:39,015 — INFO — Client gönderiyor: {'action': 'BootNotification', 'payload': {'chargePointModel': 'Sim1'}}
+2025-11-22 15:14:39,015 — ERROR — Hata: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-22 15:14:39,015 — INFO — Client gönderiyor: {'action': 'Heartbeat'}
+2025-11-22 15:30:19,442 — INFO — Server baðlantýsý deneniyor: ws://localhost:9000
+2025-11-22 15:30:19,481 — INFO — Client gönderiyor: {'messageTypeId': 2, 'messageId': 'msg01', 'action': 'BootNotification', 'payload': {'chargePointModel': 'Sim1'}}
+2025-11-22 15:30:19,481 — ERROR — Client hata: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-22 15:30:19,481 — INFO — Client gönderiyor: {'messageTypeId': 2, 'messageId': 'msg02', 'action': 'Heartbeat'}
+2025-11-22 15:36:29,131 - INFO - Server baÄŸlantÄ±sÄ± deneniyor: ws://localhost:9000
+2025-11-22 15:36:29,180 - INFO - === Normal BootNotification ===
+2025-11-22 15:36:29,180 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg01', 'action': 'BootNotification', 'payload': {'chargePointModel': 'Sim1'}}
+2025-11-22 15:36:29,180 - ERROR - Client baÄŸlantÄ± kapandÄ±: kod=1011, sebep=
+2025-11-22 15:36:29,180 - ERROR - Client baÅŸlangÄ±Ã§ hatasÄ±: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-22 15:45:58,433 - INFO - Server baÄŸlantÄ±sÄ± deneniyor: ws://localhost:9000
+2025-11-22 15:45:58,481 - INFO - === Normal BootNotification ===
+2025-11-22 15:45:58,481 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg01', 'action': 'BootNotification', 'payload': {'chargePointModel': 'Sim1'}}
+2025-11-22 15:45:58,484 - ERROR - Client baÄŸlantÄ± kapandÄ±: kod=1011, sebep=
+2025-11-22 15:45:58,484 - ERROR - Client baÅŸlangÄ±Ã§ hatasÄ±: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-22 15:53:56,862 - INFO - Server baÄŸlantÄ±sÄ± deneniyor: ws://localhost:9000
+2025-11-22 15:53:56,906 - INFO - === Normal BootNotification ===
+2025-11-22 15:53:56,906 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg01', 'action': 'BootNotification', 'payload': {'chargePointModel': 'Sim1'}}
+2025-11-22 15:53:56,922 - ERROR - Client baÄŸlantÄ± kapandÄ±: kod=1011, sebep=
+2025-11-22 15:53:56,922 - ERROR - Client baÅŸlangÄ±Ã§ hatasÄ±: received 1011 (internal error); then sent 1011 (internal error)
+2025-11-22 16:02:54,634 - INFO - Server baÄŸlantÄ±sÄ± deneniyor: ws://localhost:9000
+2025-11-22 16:02:54,666 - INFO - === Normal BootNotification ===
+2025-11-22 16:02:54,666 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg01', 'action': 'BootNotification', 'payload': {'chargePointModel': 'Sim1'}}
+2025-11-22 16:02:54,666 - INFO - Client cevap aldÄ±: {"messageTypeId": 3, "messageId": "msg01", "action": "BootNotification", "payload": {"status": "Accepted", "currentTime": "2025-11-22T13:02:54.666397Z"}}
+2025-11-22 16:02:54,666 - INFO - === Normal Heartbeat ===
+2025-11-22 16:02:54,666 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg02', 'action': 'Heartbeat', 'payload': {}}
+2025-11-22 16:02:54,666 - INFO - Client cevap aldÄ±: {"messageTypeId": 3, "messageId": "msg02", "action": "Heartbeat", "payload": {"currentTime": "2025-11-22T13:02:54.666397Z"}}
+2025-11-22 16:02:54,666 - INFO - === Delay (gecikme) testi ===
+2025-11-22 16:02:54,666 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg03', 'action': 'Heartbeat', 'payload': {}, 'test': 'delay'}
+2025-11-22 16:02:58,668 - ERROR - Client: CEVAP ALAMADI! (busy/stuck senaryosu veya server cevap vermedi)
+2025-11-22 16:02:58,668 - INFO - === Error (CALLERROR) testi ===
+2025-11-22 16:02:58,669 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg04', 'action': 'Heartbeat', 'payload': {}, 'test': 'error'}
+2025-11-22 16:02:59,680 - INFO - Client cevap aldÄ±: {"messageTypeId": 3, "messageId": "msg03", "action": "Heartbeat", "payload": {"currentTime": "2025-11-22T13:02:59.680522Z"}}
+2025-11-22 16:02:59,685 - INFO - === Stuck (busy) testi ===
+2025-11-22 16:02:59,685 - INFO - Client gÃ¶nderiyor: {'messageTypeId': 2, 'messageId': 'msg05', 'action': 'Heartbeat', 'payload': {}, 'test': 'stuck'}
+2025-11-22 16:02:59,687 - INFO - Client cevap aldÄ±: {"messageTypeId": 4, "messageId": "msg04", "action": "Heartbeat", "errorCode": "InternalError", "errorDescription": "Server error", "errorDetails": {"scenario": "error"}}

@@ -1,0 +1,70 @@
+2025-11-22 15:05:49,104 — INFO — OCPP Server baþlatýlýyor... ws://localhost:9000
+2025-11-22 15:05:49,195 — INFO — server listening on 127.0.0.1:9000
+2025-11-22 15:05:49,195 — INFO — server listening on [::1]:9000
+2025-11-22 15:07:14,801 — INFO — OCPP Server baþlatýlýyor... ws://localhost:9000
+2025-11-22 15:09:50,321 — INFO — OCPP Server baþlatýlýyor... ws://localhost:9000
+2025-11-22 15:09:50,338 — INFO — server listening on [::1]:9000
+2025-11-22 15:09:50,338 — INFO — server listening on 127.0.0.1:9000
+2025-11-22 15:13:46,763 — INFO — OCPP Server baþlatýlýyor... ws://localhost:9000
+2025-11-22 15:13:46,789 — INFO — server listening on 127.0.0.1:9000
+2025-11-22 15:13:46,789 — INFO — server listening on [::1]:9000
+2025-11-22 15:14:39,015 — INFO — connection open
+2025-11-22 15:14:39,015 — ERROR — connection handler failed
+Traceback (most recent call last):
+  File "C:\Users\Hüda\AppData\Local\Programs\Python\Python39\lib\site-packages\websockets\asyncio\server.py", line 376, in conn_handler
+    await self.handler(connection)
+TypeError: server_handler() missing 1 required positional argument: 'path'
+2025-11-22 15:26:00,116 — INFO — server listening on 127.0.0.1:9000
+2025-11-22 15:26:00,116 — INFO — server listening on [::1]:9000
+2025-11-22 15:29:23,862 — INFO — OCPP Server baþlatýlýyor -> ws://localhost:9000
+2025-11-22 15:29:23,895 — INFO — server listening on [::1]:9000
+2025-11-22 15:29:23,895 — INFO — server listening on 127.0.0.1:9000
+2025-11-22 15:30:19,481 — INFO — connection open
+2025-11-22 15:30:19,481 — ERROR — connection handler failed
+Traceback (most recent call last):
+  File "C:\Users\Hüda\AppData\Local\Programs\Python\Python39\lib\site-packages\websockets\asyncio\server.py", line 376, in conn_handler
+    await self.handler(connection)
+TypeError: server_handler() missing 1 required positional argument: 'path'
+2025-11-22 15:36:01,001 - INFO - OCPP Server baÅŸlatÄ±lÄ±yor -> ws://localhost:9000
+2025-11-22 15:36:01,033 - INFO - server listening on 127.0.0.1:9000
+2025-11-22 15:36:01,033 - INFO - server listening on [::1]:9000
+2025-11-22 15:36:29,180 - INFO - connection open
+2025-11-22 15:36:29,180 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "C:\Users\HÃ¼da\AppData\Local\Programs\Python\Python39\lib\site-packages\websockets\asyncio\server.py", line 376, in conn_handler
+    await self.handler(connection)
+TypeError: server_handler() missing 1 required positional argument: 'path'
+2025-11-22 15:45:56,431 - INFO - OCPP Server baÅŸlatÄ±lÄ±yor -> ws://localhost:9000
+2025-11-22 15:45:56,459 - INFO - server listening on 127.0.0.1:9000
+2025-11-22 15:45:56,459 - INFO - server listening on [::1]:9000
+2025-11-22 15:45:58,481 - INFO - connection open
+2025-11-22 15:45:58,481 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "C:\Users\HÃ¼da\AppData\Local\Programs\Python\Python39\lib\site-packages\websockets\asyncio\server.py", line 376, in conn_handler
+    await self.handler(connection)
+TypeError: server_handler() missing 1 required positional argument: 'path'
+2025-11-22 15:53:26,412 - INFO - OCPP Server baÅŸlatÄ±lÄ±yor -> ws://localhost:9000
+2025-11-22 15:53:26,489 - INFO - server listening on 127.0.0.1:9000
+2025-11-22 15:53:26,489 - INFO - server listening on [::1]:9000
+2025-11-22 15:53:56,906 - INFO - connection open
+2025-11-22 15:53:56,906 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "C:\Users\HÃ¼da\AppData\Local\Programs\Python\Python39\lib\site-packages\websockets\asyncio\server.py", line 376, in conn_handler
+    await self.handler(connection)
+TypeError: server_handler() missing 1 required positional argument: 'path'
+2025-11-22 16:02:27,247 - INFO - OCPP Server baÅŸlatÄ±lÄ±yor -> ws://localhost:9000
+2025-11-22 16:02:27,278 - INFO - server listening on [::1]:9000
+2025-11-22 16:02:27,278 - INFO - server listening on 127.0.0.1:9000
+2025-11-22 16:02:54,666 - INFO - connection open
+2025-11-22 16:02:54,666 - INFO - Yeni baÄŸlantÄ±: ('::1', 5641, 0, 0)
+2025-11-22 16:02:54,666 - INFO - Server mesaj aldÄ±: {"messageTypeId": 2, "messageId": "msg01", "action": "BootNotification", "payload": {"chargePointModel": "Sim1"}}
+2025-11-22 16:02:54,666 - INFO - Cevap gÃ¶nderildi: {'messageTypeId': 3, 'messageId': 'msg01', 'action': 'BootNotification', 'payload': {'status': 'Accepted', 'currentTime': '2025-11-22T13:02:54.666397Z'}}
+2025-11-22 16:02:54,666 - INFO - Server mesaj aldÄ±: {"messageTypeId": 2, "messageId": "msg02", "action": "Heartbeat", "payload": {}}
+2025-11-22 16:02:54,666 - INFO - Cevap gÃ¶nderildi: {'messageTypeId': 3, 'messageId': 'msg02', 'action': 'Heartbeat', 'payload': {'currentTime': '2025-11-22T13:02:54.666397Z'}}
+2025-11-22 16:02:54,666 - INFO - Server mesaj aldÄ±: {"messageTypeId": 2, "messageId": "msg03", "action": "Heartbeat", "payload": {}, "test": "delay"}
+2025-11-22 16:02:54,666 - WARNING - Server: Yapay gecikme (5 saniye)
+2025-11-22 16:02:59,680 - INFO - Cevap gÃ¶nderildi: {'messageTypeId': 3, 'messageId': 'msg03', 'action': 'Heartbeat', 'payload': {'currentTime': '2025-11-22T13:02:59.680522Z'}}
+2025-11-22 16:02:59,685 - INFO - Server mesaj aldÄ±: {"messageTypeId": 2, "messageId": "msg04", "action": "Heartbeat", "payload": {}, "test": "error"}
+2025-11-22 16:02:59,687 - ERROR - Server: HatalÄ± cevap senaryosu (CALLERROR).
+2025-11-22 16:02:59,687 - INFO - Server mesaj aldÄ±: {"messageTypeId": 2, "messageId": "msg05", "action": "Heartbeat", "payload": {}, "test": "stuck"}
+2025-11-22 16:02:59,687 - ERROR - Server: STUCK mod â€” bu baÄŸlantÄ± iÃ§in sonsuz bekleme!
