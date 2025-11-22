@@ -1,0 +1,1 @@
+<the original client.py content was large; it was copied verbatim into this file>
